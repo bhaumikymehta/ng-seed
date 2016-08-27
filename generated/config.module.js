@@ -7,6 +7,6 @@
     .constant('CONFIG', {
       'VERSION':'N/A',
       'BUILD_DATE':'N/A',
-      'API_END_POINT':'.'
+      'BUILD_NUMBER':'N/A'
     });
 })(angular);

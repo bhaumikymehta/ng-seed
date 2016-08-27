@@ -6,23 +6,24 @@ var gulp = require('gulp');
 var conf = require('./conf');
 var pkg = require('../package.json');
 
-function injectConfigTask (env) {
-  var now = new Date().toGMTString(),
-    buildKey = pkg.version;
+function injectConfigTask () {
+  var now = new Date().toGMTString();
+  var buildNumber = 'N/A';
+  var version = pkg.version;
 
-  //if running on bamboo
-  if(process.env['bamboo_buildResultKey']) {
-    buildKey = process.env['bamboo_buildResultKey'];
+  //if running on jenkins
+  if (process.env['BUILD_NUMBER']) {
+    buildNumber = process.env['BUILD_NUMBER'];
   }
 
   return gulp.src([path.join(conf.paths.generated, 'config.module.js')])
-    .pipe(replace('VERSION', 'N/A', buildKey))
+    .pipe(replace('VERSION', 'N/A', version))
     .pipe(replace('BUILD_DATE', 'N/A', now))
-    .pipe(replace('API_END_POINT', '.', pkg.config.API_END_POINTS[env]))
+    .pipe(replace('BUILD_NUMBER', 'N/A', buildNumber))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/generated')));
 }
 
-function replace(key, oldValue, newValue) {
+function replace (key, oldValue, newValue) {
   return $.replace(
     "'" + key + "':'" + oldValue + "'",
     "'" + key + "':'" + newValue + "'"
@@ -30,13 +31,5 @@ function replace(key, oldValue, newValue) {
 }
 
 gulp.task('configInjector', function () {
-  return injectConfigTask('local');
-});
-
-gulp.task('configInjector:test', function () {
-  return injectConfigTask('test');
-});
-
-gulp.task('configInjector:prod', function () {
-  return injectConfigTask('prod');
+  return injectConfigTask();
 });

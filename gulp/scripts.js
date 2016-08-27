@@ -27,5 +27,3 @@ function buildScripts() {
 }
 
 gulp.task('scripts', ['configInjector'], scriptsTask);
-gulp.task('scripts:test', ['configInjector:test'], scriptsTask);
-gulp.task('scripts:prod', ['configInjector:prod'], scriptsTask);

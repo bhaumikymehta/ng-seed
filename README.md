@@ -27,9 +27,7 @@ npm install
 
 ## Run
 
-* `gulp` or `gulp build` to build an optimized version of ui-xp in `./dist` and `API_END_POINT` to `local` url
-* `gulp build:test` to build an optimized version of ui-xp in `./dist` and `API_END_POINT` to `test` url
-* `gulp build:prod` to build an optimized version of ui-xp in `./dist` and `API_END_POINT` to `prod` url
+* `gulp` or `gulp build` to build an optimized version of app 
 * `gulp serve` to launch a browser sync server on your source files
 * `gulp serve:dist` to launch a server on your optimized application
 * `gulp test` to launch your unit tests with Karma
@@ -37,4 +35,4 @@ npm install
 ## Features:
 1. Uses configurable and modular `gulp` build system.
 2. Uses `Font-Awesome` and `bootstrap glyphicons`.
-3. Configurable `API_END_POINT` that can be switched among `local`, `test`, and `prod` environments.
+3. Configurable `API_PROXY` that can be switched to different environments using `--proxy` option.

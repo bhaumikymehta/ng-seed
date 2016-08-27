@@ -55,5 +55,3 @@ function injectTask () {
 }
 
 gulp.task('inject', ['scripts', 'styles'], injectTask);
-gulp.task('inject:test', ['scripts:test', 'styles'], injectTask);
-gulp.task('inject:prod', ['scripts:prod', 'styles'], injectTask);
