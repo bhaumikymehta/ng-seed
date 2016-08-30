@@ -12,6 +12,7 @@
     <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <script src="/bower_components/angular-route/angular-route.js"></script>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -28,7 +29,19 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div ui-view></div>
+
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills">
+          <!-- <li><a href="#/users">Users</a></li>-->
+          <li><a href="/movies">Movies</a></li>
+        </ul>
+      </header>
+      <section ng-view></section>
+      <footer>
+        &copy; 2016 Egen Solutions, Inc.
+      </footer>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

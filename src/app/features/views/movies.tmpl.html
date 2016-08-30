@@ -1,0 +1,13 @@
+<br>
+<div class="row">
+    <div class="col-lg-4" ng-repeat="movie in movieController.movies | limitTo:10:movieController.currentPage*10">
+        <a ng-href="/movies/{{movie.id}}">
+            <img class="img-responsive" ng-src="{{movie.Poster}}">
+        </a>
+        <h2>{{movie.Title}}</h2>
+        <p>{{movie.Plot}}</p>
+    </div>
+    <div>
+        <uib-pagination total-items="movieController.totalItems" max-size="5" boundary-links="true" ng-model="movieController.currentPage" rotate="false" ng-change="movieController.pageChanged()"></uib-pagination>
+    </div>
+</div>

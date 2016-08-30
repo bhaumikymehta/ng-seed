@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-18">
+
+            <form class="form-signin" ng-submit="userController.createUser()">
+                <table align="center">
+                    <fieldset>
+                        <div id="legend">
+                            <tr>
+                                <td>
+                                    <legend class=""><h1>Register</h1></legend>
+                                </td>
+                            </tr>
+                        </div>
+                        <div class="control-group">
+                            <tr>
+                                <td>
+                                    <label class="control-label" for="firstname">Firstname</label>
+                                </td>
+                            </tr>
+                            <div class="controls">
+                                <tr>
+                                    <td>
+                                        <input ng-model="userController.user.firstName" type="text" id="firstname"
+                                               name="firstname" autofocus placeholder="" class="form-control input-lg">
+                                    </td>
+                               
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <tr>
+                                <td>
+                                    <label class="control-label" for="lastname">Lastname</label>
+                                </td>
+                            </tr>
+                            <div class="controls">
+                                <tr>
+                                    <td>
+                                        <input ng-model="userController.user.lastName" type="text" id="lastname"
+                                               name="lastname" placeholder="" class="form-control input-lg">
+                                    </td>
+                                <div class="control-group">
+                                    <tr>
+                                        <td><label class="control-label" for="email">Email address</label>
+                                    </tr>
+                                    </td>
+                                    <div class="controls">
+                                        <tr>
+                                            <td><input ng-model="userController.user.email" type="email" id="email"
+                                                       name="email" placeholder="" class="form-control input-lg"
+                                                       required></td>
+                                        </tr>
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <tr>
+                                        <td><label class="control-label" for="password">Password</label>
+                                    </tr>
+                                    </td>
+                                    <div class="controls">
+                                        <tr>
+                                            <td><input ng-model="userController.user.password" type="password"
+                                                       id="password" name="password" placeholder=""
+                                                       class="form-control input-lg">
+                                        </tr>
+                                        </td>
+                                        
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group">
+                                    <tr>
+                                        <td><label class="control-label" for="password_confirm">Password
+                                            (Confirm)</label></td>
+                                    </tr>
+                                    <div class="controls">
+                                        <tr>
+                                            <td><input type="password" id="password_confirm" name="password_confirm"
+                                                       placeholder="" class="form-control input-lg"></td>
+                                        </tr>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <tr>
+                            <div class="control-group">
+                                <!-- Button -->
+                                <div class="controls">
+                                    <td>
+                                        <button type="submit" class="btn btn-success">Register</button>
+                                        <button type="reset" class="btn btn-danger">Reset</button>
+                                    </td>
+                                </div>
+                            </div>
+                        <tr>
+                    </fieldset>
+
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-18">
+
+            <form class="form-signin" ng-submit="userController.signInUser()" novalidate>
+                <table align="center">
+                    <tr><td>  <img src="http://jointhefastlane.com/img/movieflix-logo.png"> </td></tr>
+
+
+
+                    <tr><td>        <h2 class="form-signin-heading" align="center">Please sign in</h2> </td></tr>
+
+                    <tr>
+                        <td><label for="inputEmail" class="sr-only">Email address</label>
+                            <input ng-model="userController.user.email" type="email" id="inputEmail" class="form-control" placeholder="Email address..." required autofocus>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p class="help-block"> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="inputPassword" class="sr-only">Password</label>
+                            <input ng-model="userController.user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p class="help-block"> </p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <p class="help-block"> </p>
+                        </td>
+                    </tr>
+
+                    <tr><td>        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </td></tr>
+
+                    <tr><td>
+                        <a href="/signup"> New User? Sign up </a>
+                    </td></tr>
+
+
+                </table>
+
+        </form>
+            </div>
+    </div>
+</div> <!-- /container -->
